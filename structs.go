@@ -18,5 +18,6 @@ func (p person) print() {
 }
 
 func (pointerToPerson *person) updateName(firstName string) {
-	pointerToPerson.firstName = firstName
+	(*pointerToPerson).firstName = firstName
+	//pointerToPerson.firstName = firstName
 }
