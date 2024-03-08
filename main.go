@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+	"io"
+	"os"
 )
 
 func main() {
@@ -47,20 +48,44 @@ func main() {
 
 	//bobPointer.contact.email = "abcd@gmail.com"
 	//bob.print()
+	/*
+		colors := map[string]string{
+			"red":   "#ff0000",
+			"green": "#4bf745",
+			"white": "#ffffff",
+		}
 
-	colors := map[string]string{
-		"red":   "#ff0000",
-		"green": "#4bf745",
-		"white": "#ffffff",
-	}
+		//var colors map[string]string
 
-	//var colors map[string]string
+		//colors := make(map[string]string)
 
-	//colors := make(map[string]string)
+		//colors["white"] = "#ffffff"
+		//delete(colors, "white")
 
-	//colors["white"] = "#ffffff"
-	//delete(colors, "white")
+		fmt.Println(colors)
+		printMap(colors)
+		addItem(colors, "blue", "xxxxx1")
+		printMap(colors)
+	*/
+	/*
+		eb := engBot{}
+		sb := spanishBot{}
+		printGreeting(eb)
+		printGreeting(sb)
+	*/
 
-	fmt.Println(colors)
-	printMap(colors)
+	//httpGet()
+
+	/*
+		tr := traingle{base: 10, height: 5}
+		sq := squire{sideLenth: 2.5}
+		printArea(tr)
+		printArea(sq)
+	*/
+
+	args := os.Args[1:]
+	f, _ := os.Open(args[0])
+
+	io.Copy(os.Stdout, f)
+
 }

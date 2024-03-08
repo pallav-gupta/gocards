@@ -7,3 +7,7 @@ func printMap(c map[string]string) {
 		fmt.Println("Hexcode for ", key, " is ", val)
 	}
 }
+
+func addItem(m map[string]string, k string, v string) {
+	m[k] = v
+}
