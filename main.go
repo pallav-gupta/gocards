@@ -1,10 +1,5 @@
 package main
 
-import (
-	"io"
-	"os"
-)
-
 func main() {
 	//cards := newDeck()
 	//cards := newDeckFromFile("my_cards")
@@ -83,9 +78,14 @@ func main() {
 		printArea(sq)
 	*/
 
-	args := os.Args[1:]
-	f, _ := os.Open(args[0])
+	/*
+		args := os.Args[1:]
+		f, _ := os.Open(args[0])
 
-	io.Copy(os.Stdout, f)
+		io.Copy(os.Stdout, f)
+	*/
+
+	links := getUrls("urls.txt")
+	checkLinks(links)
 
 }
